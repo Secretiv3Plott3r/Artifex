@@ -1,0 +1,91 @@
+/* --- FOOTER.CSS --- */
+
+.main-footer {
+    padding: 3rem 1rem;
+    text-align: center;
+    color: #e5e7eb; /* Color de texto claro */
+    font-size: 0.95rem;
+    
+    /* Fondo Metálico Oscuro Final */
+    background: linear-gradient(to top, #1f2937, #111827); /* Degradado de gris muy oscuro a negro */
+    border-top: 2px solid #ff6b00; /* Línea de acento naranja en la parte superior */
+    box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.5); /* Sombra que simula profundidad */
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contact-title {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    color: #ffffff;
+    letter-spacing: 1px;
+}
+
+.contact-info {
+    margin-bottom: 2rem;
+}
+
+.contact-item {
+    margin: 0.5rem 0;
+}
+
+.icon-label {
+    font-weight: bold;
+    color: #cccccc;
+    margin-right: 5px;
+}
+
+.contact-link {
+    color: #ff6b00; /* Enlaces en color de acento */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-link:hover {
+    color: #ff8c00; /* Brillo al pasar el mouse */
+    text-decoration: underline;
+}
+
+/* --- ICONOS DE REDES SOCIALES --- */
+
+.social-icons {
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-icons a {
+    color: #ff6b00; /* Color inicial de los iconos (Naranja) */
+    font-size: 1.8rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Efecto de Brillo/Hover Vistoso */
+.social-icons a:hover {
+    color: #ffffff; /* Icono se vuelve blanco brillante */
+    transform: scale(1.2) translateY(-3px); /* Crece y se levanta ligeramente */
+    text-shadow: 0 0 10px #ff6b00; /* Añade un halo naranja alrededor del icono */
+}
+
+.copyright {
+    margin-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 1rem;
+    color: #9ca3af; /* Gris más suave para el copyright */
+    font-size: 0.85rem;
+}
+
+/* Responsividad */
+@media (max-width: 600px) {
+    .main-footer {
+        padding: 2rem 1rem;
+    }
+    .contact-title {
+        font-size: 1.5rem;
+    }
+}

@@ -1,0 +1,90 @@
+/* --- SLIDER.CSS (Mejorado) --- */
+
+.slider {
+    position: relative;
+    width: 90%; /* Ocupa más ancho en la sección */
+    max-width: 1100px; /* Ancho máximo amplio para un impacto visual */
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 5px; /* Bordes ligeramente menos redondeados para un look industrial */
+    
+    /* SOMBRA PROFUNDA Y METÁLICA (Simula un marco) */
+    box-shadow: 
+        0 8px 30px rgba(0, 0, 0, 0.7), /* Sombra exterior grande */
+        inset 0 0 15px rgba(255, 255, 255, 0.1); /* Brillo interior sutil */
+    
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Borde de marco sutil */
+}
+
+.slider-container {
+    display: flex;
+    transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94); /* Transición más fluida y profesional */
+}
+
+.slider-image {
+    width: 100%;
+    height: 500px; /* Aumentamos la altura para más impacto visual */
+    object-fit: cover;
+    flex-shrink: 0;
+    
+    /* FILTRO DE OSCURIDAD: Ayuda a que los puntos se vean mejor */
+    filter: brightness(95%);
+}
+
+/* --- DOTS (PUNTOS INDICADORES) --- */
+.slider-dots {
+    position: absolute;
+    bottom: 20px; /* Separamos más de abajo */
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 12px;
+    padding: 5px 15px;
+    border-radius: 20px;
+    background: rgba(0, 0, 0, 0.3); /* Fondo semitransparente para mejor contraste */
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    background-color: rgba(255, 255, 255, 0.4); /* Gris claro semitransparente */
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px solid transparent; /* Para el efecto de borde en el hover */
+}
+
+/* Punto Activo con color de acento Naranja Taller */
+.dot.active {
+    background-color: #ff6b00; /* Naranja vibrante */
+    transform: scale(1.1);
+    border: 2px solid #ffffff; /* Borde blanco para que resalte más */
+}
+
+/* Efecto Hover en los puntos (Feedback visual) */
+.dot:hover {
+    background-color: #ffffff;
+    border: 2px solid #ff6b00;
+}
+
+/* Responsividad para ajustar la altura en móviles */
+@media (max-width: 768px) {
+    .slider {
+        width: 100%;
+        max-width: none;
+    }
+    .slider-image {
+        height: 300px; /* Reducimos la altura en pantallas pequeñas */
+    }
+}
+
+
+/* Interacción: Pequeño zoom y brillo en hover */
+.slider-container:hover .slider-image {
+    transform: scale(1.02); /* Escala ligeramente la imagen */
+    filter: brightness(100%); /* Quita un poco de oscuridad */
+}
+
+.slider-container .slider-image {
+    transition: transform 0.8s ease, filter 0.8s ease; /* Asegúrate de que la transición sea suave */
+}

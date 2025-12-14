@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import './Slider.css'; // Estilos específicos para el slider
 const images = [
-  '/imagen1.jpg', // Agrega tus imágenes aquí (colócalas en public/)
-  '/imagen2.jpg',
-  '/imagen3.jpg',
+  'imagen1.jpg', // Agrega tus imágenes aquí (colócalas en public/)
+  'imagen2.jpg',
+  'imagen3.jpg',
 ];
 const Slider: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
